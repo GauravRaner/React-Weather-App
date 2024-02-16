@@ -4,7 +4,12 @@ import bgImg from './assets/bgImg.jpg'
 
 export const WeatherApp = () => {
   const [city, setCity] = useState("");
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({
+    main: {
+      temp: 20,
+      humidity: 50, 
+  },
+   name:"Pune"});
   const [error, setError] = useState("");
 
   const getWeather = async () => {
